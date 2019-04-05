@@ -1,11 +1,14 @@
 package br.unisul.pweb.quarta.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 
 
@@ -22,7 +25,8 @@ public class Atleta implements Serializable{
 	private Integer id;
 	private String nome; 
 
-	
+	@ManyToMany(mappedBy= "atleta")
+	private List<Competicao> competicao = new ArrayList<>();
 	
 	public Atleta() {
 		
