@@ -22,9 +22,9 @@ public class DbService {
 	
 	public void inicializaBancoDeDados() throws ParseException {
 		
-		Atleta atle1 = new Atleta(null, "Robson");
-		Atleta atle2 = new Atleta(null, "Ricardo");
-		Atleta atle3 = new Atleta(null, "Klaiton");
+		Atleta atle1 = new Atleta(null,"Robson","100 metros rasos"); 
+		Atleta atle2 = new Atleta(null,"Ricardo"," Nado rapido"); 
+		Atleta atle3 = new Atleta(null,"Clavison"," Programação sobre pressão");
 		
 		atleRep.saveAll(Arrays.asList(atle1, atle2, atle3));  
 		

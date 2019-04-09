@@ -24,6 +24,7 @@ public class Atleta implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private String nome; 
+	private String modalidade;
 
 	@ManyToMany(mappedBy= "atleta")
 	private List<Competicao> competicao = new ArrayList<>();
@@ -32,11 +33,20 @@ public class Atleta implements Serializable{
 		
 	} 
 
-	
-	public Atleta(Integer id, String nome) {		
+
+	public Atleta(Integer id, String nome, String modalidade) {		
 		this.id= id;
 		this.nome = nome;
+		this.modalidade = modalidade;
 		
+	}
+	public String getModalidade() {
+		return modalidade;
+	}
+
+
+	public void setModalidade(String modalidade) {
+		this.modalidade = modalidade;
 	}
 
 	public Integer getId() {
